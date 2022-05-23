@@ -60,6 +60,7 @@ class MainActivity : ComponentActivity() {
         if (shouldShowOnboarding) {
             OnboardingScreen(OnContinueClicked = { shouldShowOnboarding = false })
         } else {
+            mNames.sortedBy { it.length }
             Greetings(mNames)
         }
     }
