@@ -60,6 +60,7 @@ class MainActivity : ComponentActivity() {
         if (shouldShowOnboarding) {
             OnboardingScreen(OnContinueClicked = { shouldShowOnboarding = false })
         } else {
+            mNames.sortedBy { it.length }
             Greetings(mNames)
         }
     }
@@ -85,7 +86,7 @@ class MainActivity : ComponentActivity() {
     @Composable
     fun Greeting(name: String) {
         var expanded by remember { mutableStateOf(false) }
-        var extraPadding = if (expanded) 48.dp else 0.dp
+        val extraPadding = as AnimateasDpState{ if (expanded) 48.dp else 0.dp}
         Surface(
             color = MaterialTheme.colors.primary, modifier = Modifier.padding(
                 horizontal = 8.dp,
