@@ -83,6 +83,7 @@ class MainActivity : ComponentActivity() {
     }
 
 
+    //Add new comment
     @Composable
     fun Greeting(name: String) {
         var expanded by remember { mutableStateOf(false) }
