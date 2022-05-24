@@ -84,7 +84,7 @@ class MainActivity : ComponentActivity() {
     }
 
 
-    //used greeting
+    //Used to display row of names
     @Composable
     fun Greeting(name: String) {
         var expanded by remember { mutableStateOf(false) }
